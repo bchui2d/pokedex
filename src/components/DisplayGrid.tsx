@@ -1,22 +1,24 @@
-import { Box, Image, Text } from "@chakra-ui/react";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
+import usePokemon from "./hooks/usePokemon";
+
 
 const DisplayGrid = () => {
-  const fetchPokemon = () =>
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon/ditto")
-      .then((res) => res.data);
+  const { data, error, isLoading } = usePokemon();
 
-  const { data } = useQuery({
-    queryKey: ["pokemon"],
-    queryFn: fetchPokemon,
-  });
+  if (isLoading) return <p>Loading...</p>;
 
-  var pokeImage = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${data.id}.png`
+  if (error) return <p>Error retrieving pokemon...</p>;
+
+  
 
   return (
-    <Image src={pokeImage} />
+
+    <UnorderedList>
+      {data.results.map((poke) => (
+        <ListItem>{poke.name}</ListItem>
+      ))}
+    </UnorderedList>
+
   );
 };
 
