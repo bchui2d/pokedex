@@ -1,24 +1,20 @@
-import { ListItem, UnorderedList } from "@chakra-ui/react";
-import usePokemon from "./hooks/usePokemon";
-
+import { SimpleGrid, Text } from "@chakra-ui/react";
+import usePokemonList from "./hooks/usePokemonList";
+import PokemonCard from "./PokemonCard";
 
 const DisplayGrid = () => {
-  const { data, error, isLoading } = usePokemon();
+  const { data, isLoading, error } = usePokemonList();
 
   if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>Error retrieving pokemon...</p>;
 
-  
-
   return (
-
-    <UnorderedList>
-      {data.results.map((poke) => (
-        <ListItem>{poke.name}</ListItem>
+    <SimpleGrid columns={3} spacing={10}>
+      {data.results.map((poke, index) => (
+        <PokemonCard key={index} pokemon={poke.name}></PokemonCard>
       ))}
-    </UnorderedList>
-
+    </SimpleGrid>
   );
 };
 

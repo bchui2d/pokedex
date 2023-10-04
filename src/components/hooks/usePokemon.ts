@@ -1,25 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-
+import APIClient from "../services/apiClient";
 
 export interface Pokemon {
-  name: string;
   id: number;
+  name?: string;
+  sprites: {
+    front_default: string;
+  };
 }
 
-export interface Results{
-  results: Pokemon[];
-}
+const usePokemon = (name: string) => {
+  const apiClient = new APIClient<Pokemon>(`/pokemon/${name}/`);
 
-const usePokemon = () => {
-  const fetchPokemon = () =>
-    axios
-      .get<Results>('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0')
-      .then((res) => res.data);
-
-  return useQuery<Results, Error>({
-    queryKey: ['Pokemon'],
-    queryFn: fetchPokemon,
+  return useQuery<Pokemon, Error>({
+    queryKey: ["Pokemon", name],
+    queryFn: apiClient.getList,
+    staleTime: 10 * 1000,
   });
 };
 

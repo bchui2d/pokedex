@@ -1,13 +1,13 @@
-import { HStack, Heading, Image } from "@chakra-ui/react";
-import logo from '../assets/pngegg.png'
+import { HStack, Image, Text } from "@chakra-ui/react";
+import logo from "../assets/pngegg.png";
 
-const navbar = () => {
+const NavBar = () => {
   return (
     <HStack>
-      <Image src={logo} boxSize='35px'></Image>
-      <Heading>Pokedex</Heading>
+      <Image src={logo} boxSize="45px"></Image>
+      <Text>PokeDex</Text>
     </HStack>
   );
 };
 
-export default navbar;
+export default NavBar;
