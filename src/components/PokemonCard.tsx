@@ -22,7 +22,7 @@ const PokemonCard = ({ pokemon }: Props) => {
   return (
     <Card maxW={"sm"} align="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
-        <Image src={data.sprites.other.dream_world.front_default}></Image>
+        <Image boxSize={'270px'} src={data.sprites.other.dream_world.front_default}></Image>
         <Heading textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
         </Heading>
