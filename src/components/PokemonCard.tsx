@@ -8,6 +8,13 @@ interface Props {
 const PokemonCard = ({ pokemon }: Props) => {
   const { data, isLoading, error } = usePokemon(pokemon);
 
+  function capitalizeFirstLetter(str?: string){
+    if(str){
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+    return '';
+  }
+
   if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>Error retrieving pokemon...</p>;
@@ -17,7 +24,7 @@ const PokemonCard = ({ pokemon }: Props) => {
       <CardBody>
         <Image src={data.sprites.other.dream_world.front_default}></Image>
         <Heading textAlign={"center"} fontSize={"2xl"}>
-          {data.name}
+          {capitalizeFirstLetter(data.name)}
         </Heading>
       </CardBody>
     </Card>
