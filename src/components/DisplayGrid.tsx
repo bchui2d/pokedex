@@ -10,7 +10,7 @@ const DisplayGrid = () => {
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <SimpleGrid columns={3} spacing={10}>
+    <SimpleGrid p={5} columns={{sm:1, md: 2, lg:3, xl:4}} spacing={5}>
       {data.results.map((poke, index) => (
         <PokemonCard key={index} pokemon={poke.name}></PokemonCard>
       ))}

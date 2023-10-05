@@ -13,10 +13,12 @@ const PokemonCard = ({ pokemon }: Props) => {
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <Card>
-      <Image src={data.sprites.front_default}></Image>
+    <Card maxW={"sm"} align="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
-        <Heading>{data.name}</Heading>
+        <Image src={data.sprites.other.dream_world.front_default}></Image>
+        <Heading textAlign={"center"} fontSize={"2xl"}>
+          {data.name}
+        </Heading>
       </CardBody>
     </Card>
   );
