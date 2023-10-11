@@ -1,5 +1,6 @@
 import { Card, CardBody, Heading, Image, Text } from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
+import PokemonTypes from "./PokemonTypes";
 
 interface Props {
   pokemon: string;
@@ -26,7 +27,7 @@ const PokemonCard = ({ pokemon }: Props) => {
         <Heading textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
         </Heading>
-        {data.types.map(type => <Text>{type.type.name}</Text>)}
+        <PokemonTypes types = {data.types.map(t => t.type)}></PokemonTypes>
       </CardBody>
     </Card>
   );
