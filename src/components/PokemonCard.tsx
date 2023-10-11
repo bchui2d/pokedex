@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Image } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Image, Text } from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
 
 interface Props {
@@ -26,6 +26,7 @@ const PokemonCard = ({ pokemon }: Props) => {
         <Heading textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
         </Heading>
+        {data.types.map(type => <Text>{type.type.name}</Text>)}
       </CardBody>
     </Card>
   );

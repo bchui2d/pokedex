@@ -1,6 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../services/apiClient";
 
+interface Type{
+  name: string;
+  url: string;
+}
+
 export interface Pokemon {
   id: number;
   name?: string;
@@ -8,6 +13,7 @@ export interface Pokemon {
     other: any;
     front_default: string;
   };
+  types: {type: Type}[]
 }
 
 const usePokemon = (name: string) => {

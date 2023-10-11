@@ -1,4 +1,4 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid } from "@chakra-ui/react";
 import usePokemonList from "./hooks/usePokemonList";
 import PokemonCard from "./PokemonCard";
 
