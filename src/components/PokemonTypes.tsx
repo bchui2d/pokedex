@@ -1,4 +1,4 @@
-import { Box, Center, HStack, Text } from "@chakra-ui/react";
+import { Box, Center, HStack, Stack, Text } from "@chakra-ui/react";
 import { Type } from "./hooks/usePokemon";
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 const PokemonTypes = ({ types }: Props) => {
   return (
     <>
-      <HStack spacing={"24px"}>
+      <Stack direction={'row'} justify={'center'} pt={2}>
         {types.map((type, index) => (
           <Box boxShadow={"base"} bg={"tomato"} borderRadius={"lg"} w={"40%"}>
             <Center>
@@ -16,7 +16,7 @@ const PokemonTypes = ({ types }: Props) => {
             </Center>
           </Box>
         ))}
-      </HStack>
+      </Stack>
     </>
   );
 };
