@@ -9,11 +9,11 @@ interface Props {
 const PokemonCard = ({ pokemon }: Props) => {
   const { data, isLoading, error } = usePokemon(pokemon);
 
-  function capitalizeFirstLetter(str?: string){
-    if(str){
+  function capitalizeFirstLetter(str?: string) {
+    if (str) {
       return str.charAt(0).toUpperCase() + str.slice(1);
     }
-    return '';
+    return "";
   }
 
   if (isLoading) return <p>Loading...</p>;
@@ -23,11 +23,14 @@ const PokemonCard = ({ pokemon }: Props) => {
   return (
     <Card maxW={"sm"} align="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
-        <Image boxSize={'270px'} src={data.sprites.other.dream_world.front_default}></Image>
+        <Image
+          boxSize={"270px"}
+          src={data.sprites.other.dream_world.front_default}
+        ></Image>
         <Heading textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
         </Heading>
-        <PokemonTypes types = {data.types.map(t => t.type)}></PokemonTypes>
+        <PokemonTypes types={data.types.map((t) => t.type)}></PokemonTypes>
       </CardBody>
     </Card>
   );
