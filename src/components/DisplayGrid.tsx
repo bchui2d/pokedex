@@ -5,7 +5,7 @@ import PokemonCardSkeleton from "./PokemonCardSkeleton";
 
 const DisplayGrid = () => {
   const { data, isLoading, error } = usePokemonList();
-  const skeletons = Array.from({length: 60}, (i) => i)
+  let skeletons: Array<number> = new Array(60).fill(null).map((_, i) => i );
 
   // if (isLoading) return <p>Loading...</p>;
 
