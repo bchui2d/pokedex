@@ -2,7 +2,7 @@ import { Card, CardBody, Skeleton, SkeletonText } from "@chakra-ui/react";
 
 const PokemonCardSkeleton = () => {
   return (
-    <Card maxW={"sm"} align="center" borderRadius={10} overflow={"hidden"}>
+    <Card maxW={"md"} align="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
         <Skeleton boxSize={"270px"}></Skeleton>
         <SkeletonText></SkeletonText>
