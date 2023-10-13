@@ -5,14 +5,19 @@ import PokemonCardSkeleton from "./PokemonCardSkeleton";
 
 const DisplayGrid = () => {
   const { data, isLoading, error } = usePokemonList();
-  let skeletons: Array<number> = new Array(60).fill(null).map((_, i) => i );
+  let skeletons: Array<number> = new Array(60).fill(null).map((_, i) => i);
 
   // if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <SimpleGrid p={5} columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={5}>
+    <SimpleGrid
+      maxW={"2000px"}
+      p={5}
+      columns={{ sm: 1, md: 2, lg: 3, xl: 4, "2xl":5 }}
+      spacing={5}
+    >
       {isLoading &&
         skeletons.map((skeleton) => (
           <PokemonCardSkeleton key={skeleton}></PokemonCardSkeleton>

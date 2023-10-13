@@ -1,5 +1,5 @@
 import "./App.css";
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Center, Grid, GridItem, Show } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import DisplayGrid from "./components/DisplayGrid";
 
@@ -9,6 +9,10 @@ function App() {
       templateAreas={{
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
+      }}
+      templateColumns={{
+        base:'1fr',
+        lg: '200px 1fr'
       }}
     >
       <GridItem area="nav">
@@ -20,7 +24,10 @@ function App() {
         </GridItem>
       </Show>
       <GridItem area="main" bg="dodgerblue">
+        <Center>
+
         <DisplayGrid></DisplayGrid>
+        </Center>
       </GridItem>
     </Grid>
   );

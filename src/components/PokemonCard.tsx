@@ -21,7 +21,7 @@ const PokemonCard = ({ pokemon }: Props) => {
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <Card maxW={"sm"} align="center" borderRadius={10} overflow={"hidden"}>
+    <Card maxW={"md"} align="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
         <Image
           boxSize={"270px"}
