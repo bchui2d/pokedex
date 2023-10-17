@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../services/apiClient";
 
-const apiClient = new APIClient<PkmnResults>("/pokemon?limit=60&offset=0");
+const apiClient = new APIClient<PkmnResults>(`/pokemon?limit=100&pffset=0`);
 
 export interface PokemonURL {
   name: string;

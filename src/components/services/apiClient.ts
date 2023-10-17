@@ -16,7 +16,9 @@ class APIClient<T> {
   };
 
   getList = () => {
-    return axiosInstance.get<T>(this.endpoint).then((res) => res.data);
+    return axiosInstance
+      .get<T>(this.endpoint)
+      .then((res) => res.data);
   };
 
   post = (data: T) => {
