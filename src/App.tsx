@@ -23,7 +23,7 @@ function App() {
           Aside
         </GridItem>
       </Show>
-      <GridItem area="main" bg="dodgerblue">
+      <GridItem area="main" bg={"#d3d4e0"}>
         <Center>
           <DisplayGrid></DisplayGrid>
         </Center>

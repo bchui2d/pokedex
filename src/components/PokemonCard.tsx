@@ -2,6 +2,7 @@ import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
 import PokemonTypes from "./PokemonTypes";
 import pokeball from "../assets/clipart1298491.png";
+import {motion} from "framer-motion";
 
 interface Props {
   pokemonId: number;
@@ -22,17 +23,28 @@ const PokemonCard = ({ pokemonId }: Props) => {
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <Card maxW={"md"} justifyContent="center" borderRadius={10} overflow={"hidden"}>
+    <Card
+      as={motion.div}
+      bg={"#f0f1ff"}
+      maxW={"md"}
+      justifyContent="center"
+      borderRadius={10}
+      overflow={"hidden"}
+      boxShadow={"dark-lg"}
+      whileHover={{scale: 1.05}}
+    >
       <CardBody>
         <HStack justifyContent={"left"} p={1}>
-          <Image boxSize={'25px'} src={pokeball}></Image>
-          <Heading fontSize={"2xl"}>{"#"+`0000${data.id}`.slice(-4)}</Heading>
+          <Image boxSize={"25px"} src={pokeball}></Image>
+          <Heading color={"blackAlpha.700"} fontSize={"2xl"}>
+            {"#" + `0000${data.id}`.slice(-4)}
+          </Heading>
         </HStack>
         <Image
           boxSize={"270px"}
           src={data.sprites.other["official-artwork"].front_default}
         ></Image>
-        <Heading textAlign={"center"} fontSize={"2xl"}>
+        <Heading color={"blackAlpha.700"} textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
         </Heading>
         <PokemonTypes types={data.types.map((t) => t.type)}></PokemonTypes>
