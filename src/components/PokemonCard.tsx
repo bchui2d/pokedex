@@ -4,11 +4,11 @@ import PokemonTypes from "./PokemonTypes";
 import pokeball from "../assets/clipart1298491.png";
 
 interface Props {
-  pokemon: string;
+  pokemonId: number;
 }
 
-const PokemonCard = ({ pokemon }: Props) => {
-  const { data, isLoading, error } = usePokemon(pokemon);
+const PokemonCard = ({ pokemonId }: Props) => {
+  const { data, isLoading, error } = usePokemon(pokemonId);
 
   function capitalizeFirstLetter(str?: string) {
     if (str) {

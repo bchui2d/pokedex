@@ -31,7 +31,7 @@ const DisplayGrid = () => {
         })
         .slice(0, 60)
         .map((poke, index) => (
-          <PokemonCard key={index} pokemon={poke.name}></PokemonCard>
+          <PokemonCard key={index} pokemonId={parseInt(poke.url.slice(42, -1))}></PokemonCard>
         ))}
     </SimpleGrid>
   );

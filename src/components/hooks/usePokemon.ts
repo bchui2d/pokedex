@@ -20,11 +20,11 @@ export interface Pokemon {
   types: {type: Type}[]
 }
 
-const usePokemon = (name: string) => {
-  const apiClient = new APIClient<Pokemon>(`/pokemon/${name}/`);
+const usePokemon = (id: number) => {
+  const apiClient = new APIClient<Pokemon>(`/pokemon/${id}`);
 
   return useQuery<Pokemon, Error>({
-    queryKey: ["Pokemon", name],
+    queryKey: ["Pokemon", id],
     queryFn: apiClient.getList,
     staleTime: 10 * 1000,
   });
