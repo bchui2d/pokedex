@@ -1,8 +1,16 @@
-import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  HStack,
+  Heading,
+  Image,
+  SkeletonText,
+} from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
 import PokemonTypes from "./PokemonTypes";
 import pokeball from "../assets/clipart1298491.png";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import PokemonCardSkeleton from "./PokemonCardSkeleton";
 
 interface Props {
   pokemonId: number;
@@ -18,7 +26,7 @@ const PokemonCard = ({ pokemonId }: Props) => {
     return "";
   }
 
-  if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <PokemonCardSkeleton></PokemonCardSkeleton>;
 
   if (error) return <p>Error retrieving pokemon...</p>;
 
@@ -31,7 +39,7 @@ const PokemonCard = ({ pokemonId }: Props) => {
       borderRadius={10}
       overflow={"hidden"}
       boxShadow={"dark-lg"}
-      whileHover={{scale: 1.05}}
+      whileHover={{ scale: 1.05 }}
     >
       <CardBody>
         <HStack justifyContent={"left"} p={1}>
