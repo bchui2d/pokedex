@@ -5,11 +5,9 @@ import PokemonCardSkeleton from "./PokemonCardSkeleton";
 import useSearchStore from "./store";
 
 const DisplayGrid = () => {
-  const {pokemonQuery} = useSearchStore();
+  const { pokemonQuery } = useSearchStore();
   const { data, isLoading, error } = usePokemonList();
   let skeletons: Array<number> = new Array(60).fill(null).map((_, i) => i);
-
-  // if (isLoading) return <p>Loading...</p>;
 
   if (error) return <p>Error retrieving pokemon...</p>;
 
@@ -25,12 +23,16 @@ const DisplayGrid = () => {
           <PokemonCardSkeleton key={skeleton}></PokemonCardSkeleton>
         ))}
 
-      {data?.results.filter((p) => {
-        return pokemonQuery === '' ? p : p.name.includes(pokemonQuery)
-      }).map((poke, index) => (
-        <PokemonCard key={index} pokemon={poke.name}></PokemonCard>
-      ))}
-
+      {data?.results
+        .filter((p) => {
+          return pokemonQuery.toLowerCase() === ""
+            ? p
+            : p.name.includes(pokemonQuery.toLowerCase());
+        })
+        .slice(0, 60)
+        .map((poke, index) => (
+          <PokemonCard key={index} pokemon={poke.name}></PokemonCard>
+        ))}
     </SimpleGrid>
   );
 };

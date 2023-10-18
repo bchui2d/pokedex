@@ -25,7 +25,7 @@ const PokemonCard = ({ pokemon }: Props) => {
       <CardBody>
         <Image
           boxSize={"270px"}
-          src={data.sprites.other.dream_world.front_default}
+          src={data.sprites.other["official-artwork"].front_default}
         ></Image>
         <Heading textAlign={"center"} fontSize={"2xl"}>
           {capitalizeFirstLetter(data.name)}
