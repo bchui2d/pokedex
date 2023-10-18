@@ -1,6 +1,7 @@
-import { Card, CardBody, Heading, Image } from "@chakra-ui/react";
+import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
 import PokemonTypes from "./PokemonTypes";
+import pokeball from "../assets/clipart1298491.png";
 
 interface Props {
   pokemon: string;
@@ -21,8 +22,12 @@ const PokemonCard = ({ pokemon }: Props) => {
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (
-    <Card maxW={"md"} align="center" borderRadius={10} overflow={"hidden"}>
+    <Card maxW={"md"} justifyContent="center" borderRadius={10} overflow={"hidden"}>
       <CardBody>
+        <HStack justifyContent={"left"} p={1}>
+          <Image boxSize={'25px'} src={pokeball}></Image>
+          <Heading fontSize={"2xl"}>{"#"+`0000${data.id}`.slice(-4)}</Heading>
+        </HStack>
         <Image
           boxSize={"270px"}
           src={data.sprites.other["official-artwork"].front_default}
