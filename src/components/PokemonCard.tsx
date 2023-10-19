@@ -4,7 +4,6 @@ import {
   HStack,
   Heading,
   Image,
-  SkeletonText,
 } from "@chakra-ui/react";
 import usePokemon from "./hooks/usePokemon";
 import PokemonTypes from "./PokemonTypes";
@@ -35,7 +34,7 @@ const PokemonCard = ({ pokemonId }: Props) => {
       as={motion.div}
       bg={"#f0f1ff"}
       maxW={"md"}
-      justifyContent="center"
+      // justifyContent="center"
       borderRadius={10}
       overflow={"hidden"}
       boxShadow={"dark-lg"}

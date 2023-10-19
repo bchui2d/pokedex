@@ -8,18 +8,18 @@ function App() {
     <Grid
       templateAreas={{
         base: `"nav" "main"`,
-        lg: `"nav nav" "aside main"`,
+        lg: `"nav nav" "main aside"`,
       }}
       templateColumns={{
         base: "1fr",
-        lg: "200px 1fr",
+        lg: "1fr 200px",
       }}
     >
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
       <Show above="lg">
-        <GridItem area="aside" bg="gold">
+        <GridItem area="aside" bg="#d3d4e0">
           Aside
         </GridItem>
       </Show>
