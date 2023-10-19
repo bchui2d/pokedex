@@ -19,19 +19,19 @@ function App() {
       <GridItem area="nav">
         <NavBar></NavBar>
       </GridItem>
-      <Show above="lg">
-        <GridItem area="aside" bg="#d3d4e0">
-          Aside
-        </GridItem>
-      </Show>
       <GridItem area="main" bg={"#d3d4e0"}>
         <Center>
-          <VStack width={"100%"}>
+          <VStack maxW={"1600px"}>
             <SearchInput></SearchInput>
             <DisplayGrid></DisplayGrid>
           </VStack>
         </Center>
       </GridItem>
+      <Show above="lg">
+        <GridItem area="aside" bg="#d3d4e0">
+          Aside
+        </GridItem>
+      </Show>
     </Grid>
   );
 }

@@ -1,11 +1,11 @@
-import { HStack, Image, Text } from "@chakra-ui/react";
+import { HStack, Heading, Image } from "@chakra-ui/react";
 import logo from "../assets/pngegg.png";
 
 const NavBar = () => {
   return (
-    <HStack p={"10px"}>
+    <HStack pl={5} pt={2} pb={2}>
       <Image src={logo} boxSize="45px"></Image>
-      <Text>PokeDex</Text>
+      <Heading>PokeDex</Heading>
     </HStack>
   );
 };
