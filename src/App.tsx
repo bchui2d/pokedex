@@ -1,8 +1,9 @@
 import "./App.css";
-import { Center, Grid, GridItem, Show, VStack } from "@chakra-ui/react";
+import { Center, Grid, GridItem, HStack, Show, VStack } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import DisplayGrid from "./components/DisplayGrid";
 import SearchInput from "./components/SearchInput";
+import TypeSelector from "./components/TypeSelector";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Center>
           <VStack maxW={"1600px"} w={"100%"}>
             <SearchInput></SearchInput>
+            <HStack pl={5} maxW={"1600px"} w={"100%"} justifyContent={"left"}>
+              <TypeSelector></TypeSelector>
+            </HStack>
             <DisplayGrid></DisplayGrid>
           </VStack>
         </Center>
