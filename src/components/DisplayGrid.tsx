@@ -7,7 +7,7 @@ import useSearchStore from "./store";
 const DisplayGrid = () => {
   const { pokemonQuery } = useSearchStore();
   const { data, isLoading, error } = usePokemonList();
-  let skeletons: Array<number> = new Array(60).fill(null).map((_, i) => i);
+  let skeletons: Array<number> = new Array(20).fill(null).map((_, i) => i);
 
   if (error) return <p>Error retrieving pokemon...</p>;
 
@@ -29,7 +29,7 @@ const DisplayGrid = () => {
             ? p
             : p.name.includes(pokemonQuery.toLowerCase());
         })
-        .slice(0, 60)
+        .slice(0, 20)
         .map((poke, index) => (
           <PokemonCard
             key={index}

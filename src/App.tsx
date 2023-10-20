@@ -9,7 +9,7 @@ function App() {
     <Grid
       templateAreas={{
         base: `"nav" "main"`,
-        lg: `"nav nav" "main aside"`,
+        lg: `"nav aside" "main aside"`,
       }}
       templateColumns={{
         base: "1fr",
@@ -17,11 +17,15 @@ function App() {
       }}
     >
       <GridItem area="nav">
-        <NavBar></NavBar>
+        <Center>
+          <VStack maxW={"1600px"} w={"100%"}>
+            <NavBar></NavBar>
+          </VStack>
+        </Center>
       </GridItem>
       <GridItem area="main" bg={"#d3d4e0"}>
         <Center>
-          <VStack maxW={"1600px"}>
+          <VStack maxW={"1600px"} w={"100%"}>
             <SearchInput></SearchInput>
             <DisplayGrid></DisplayGrid>
           </VStack>
