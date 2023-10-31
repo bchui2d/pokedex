@@ -14,14 +14,17 @@
     "@chakra-ui/react": "^2.8.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@tanstack/react-query": "^4.32.6",
+    "@tanstack/react-query": "^4.36.1",
+    "@tanstack/react-query-devtools": "^5.4.3",
     "axios": "^1.5.0",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "simple-zustand-devtools": "^1.1.0",
     "zustand": "^4.4.3"
   },
   "devDependencies": {
+    "@types/node": "^20.8.10",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

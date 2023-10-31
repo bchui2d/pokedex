@@ -2,10 +2,11 @@ import { SimpleGrid } from "@chakra-ui/react";
 import usePokemonList from "./hooks/usePokemonList";
 import PokemonCard from "./PokemonCard";
 import PokemonCardSkeleton from "./PokemonCardSkeleton";
-import useSearchStore from "./store";
+import useBoundedStore from "./store";
+
 
 const DisplayGrid = () => {
-  const { pokemonQuery } = useSearchStore();
+  const { pokemonQuery } = useBoundedStore();
   const { data, isLoading, error } = usePokemonList();
   let skeletons: Array<number> = new Array(20).fill(null).map((_, i) => i);
 

@@ -7,11 +7,11 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { useRef } from "react";
-import useSearchStore from "./store";
+import useBoundedStore from "./store";
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const setSearchText = useSearchStore((s) => s.setSearchText);
+  const setSearchText = useBoundedStore((s) => s.setSearchText);
 
   return (
     <form
