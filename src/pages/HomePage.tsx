@@ -1,11 +1,10 @@
-import "./App.css";
-import { Center, Grid, GridItem, HStack, Show, VStack } from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
-import DisplayGrid from "./components/DisplayGrid";
-import SearchInput from "./components/SearchInput";
-import TypeSelector from "./components/TypeSelector";
+import { Grid, GridItem, Center, VStack, HStack, Show } from '@chakra-ui/react';
+import React from 'react'
+import DisplayGrid from '../components/DisplayGrid';
+import SearchInput from '../components/SearchInput';
+import TypeSelector from '../components/TypeSelector';
 
-function App() {
+const HomePage = () => {
   return (
     <Grid
       templateAreas={{
@@ -44,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage

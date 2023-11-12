@@ -17,7 +17,8 @@ const usePokemonList = () => {
   return useQuery<PkmnResults, Error>({
     queryKey: ["PokemonList"],
     queryFn: apiClient.getList,
-    staleTime: 10 * 1000,
+    staleTime: Infinity,
+    cacheTime: Infinity
   });
 };
 

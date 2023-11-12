@@ -10,6 +10,9 @@ const DisplayGrid = () => {
   const { data, isLoading, error } = usePokemonList();
   let skeletons: Array<number> = new Array(20).fill(null).map((_, i) => i);
 
+  // const typeFilter = (type: string) => type === typeQuery;
+  // const filteredData = data?.results.filter(typeFilter);
+
   if (error) return <p>Error retrieving pokemon...</p>;
 
   return (

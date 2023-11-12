@@ -23,7 +23,7 @@ const PokemonCard = ({ pokemonId }: Props) => {
       return str.charAt(0).toUpperCase() + str.slice(1);
     }
     return "";
-  }
+  } 
 
   if (isLoading) return <PokemonCardSkeleton></PokemonCardSkeleton>;
 

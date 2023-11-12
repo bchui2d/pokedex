@@ -17,7 +17,7 @@ const createSearchSlice: StateCreator<SearchSlice> = (set) => ({
 })
 
 const createTypeSlice: StateCreator<TypeSlice> = (set) => ({
-  typeQuery: "Fire",
+  typeQuery: "",
   setType: (selectedType) => set(() => ({typeQuery: selectedType}))
 })
 

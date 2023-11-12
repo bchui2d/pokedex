@@ -26,7 +26,7 @@ const usePokemon = (id: number) => {
   return useQuery<Pokemon, Error>({
     queryKey: ["Pokemon", id],
     queryFn: apiClient.getList,
-    staleTime: 10 * 1000,
+    staleTime: Infinity,
   });
 };
 
