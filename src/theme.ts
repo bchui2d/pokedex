@@ -23,6 +23,13 @@ const theme = extendTheme({
       fairy: "#D685AD",
     },
   },
+  styles: {
+    global: {
+      body: {
+        bg: "#d3d4e0",
+      },
+    },
+  },
 });
 
 export default theme;

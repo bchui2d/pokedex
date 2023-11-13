@@ -18,6 +18,7 @@ const DisplayGrid = () => {
   return (
     <SimpleGrid
       maxW={"2000px"}
+      
       p={5}
       columns={{ sm: 1, md: 2, lg: 3, xl: 4, "2xl": 5 }}
       spacing={5}
