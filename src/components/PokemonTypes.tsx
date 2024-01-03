@@ -18,7 +18,7 @@ const PokemonTypes = ({ types }: Props) => {
             w={"40%"}
           >
             <Center>
-              <Text>{type.name}</Text>
+              <Text color={"whiteAlpha.800"} >{type.name}</Text>
             </Center>
           </Box>
         ))}

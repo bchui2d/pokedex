@@ -1,17 +1,12 @@
 import {
   Box,
-  Center,
   Heading,
   Image,
   SimpleGrid,
   Text,
   VStack,
-  filter,
 } from "@chakra-ui/react";
-import usePokemonList, {
-  PkmnResults,
-  PokemonURL,
-} from "./hooks/usePokemonList";
+import usePokemonList, { PkmnResults } from "./hooks/usePokemonList";
 import PokemonCard from "./PokemonCard";
 import PokemonCardSkeleton from "./PokemonCardSkeleton";
 import useBoundedStore from "./store";
@@ -80,11 +75,11 @@ const DisplayGrid = () => {
       filteredPokemon(data) === undefined ? (
         <VStack maxW={"1600px"} w={"100%"}>
           <Image src={faceplant}></Image>
-          <Box>
-
-          </Box>
-          <Heading>Oh no!</Heading>
-          <Text textAlign={'center'}>We can't find what you are looking for...</Text>
+          <Box></Box>
+          <Heading color={"blackAlpha.700"}>Oh no!</Heading>
+          <Text color={"blackAlpha.700"} textAlign={"center"}>
+            We can't find what you are looking for...
+          </Text>
         </VStack>
       ) : (
         filteredPokemon(data)?.map((poke, index) => (

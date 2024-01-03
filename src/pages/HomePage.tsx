@@ -1,5 +1,4 @@
 import { Grid, GridItem, Center, VStack, HStack, Show } from '@chakra-ui/react';
-import React from 'react'
 import DisplayGrid from '../components/DisplayGrid';
 import SearchInput from '../components/SearchInput';
 import TypeSelector from '../components/TypeSelector';
