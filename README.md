@@ -6,6 +6,8 @@ In this Project I created a PokeDex similar to show relevant information of Poke
 
 I built this app using [ReactJS](https://reactjs.org/) v18 + [Vite](https://vitejs.dev/)
 
+Styling  [Chakraui](https://chakra-ui.com/)
+
 ## Screenshots
 
 A quick overview of the App
