@@ -18,7 +18,8 @@ A quick overview of the App.
 
 ## Search
 Live Search functionality.
-![Image](<src/assets/Screenshot 2024-01-31 220328.png>)
+
+![Image](https://github.com/bchui2d/pokedex/blob/main/src/assets/preview.gif.gif)
 
 ## In progress
 
