@@ -1,6 +1,6 @@
 # PokeDex
 
-In this Project I created a PokeDex similar to show relevant information of Pokemon. Information is provided through an API from [pokeapi](https://pokeapi.co).
+I created a web application to showcase pokemon in a digital encylopedia format. Information is provided through an API from [pokeapi](https://pokeapi.co).
 
 ## Technologies
 
