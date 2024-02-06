@@ -2,6 +2,8 @@
 
 I created a web application to showcase pokemon in a digital encylopedia format. Information is provided through an API from [pokeapi](https://pokeapi.co).
 
+Supported with all current generations.
+
 ## Technologies
 
 I built this app using [ReactJS](https://reactjs.org/) v18 + [Vite](https://vitejs.dev/).
