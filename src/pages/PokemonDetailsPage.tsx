@@ -17,7 +17,7 @@ const PokemonDetailsPage = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
           repudiandae quam quis, aliquid error tempore porro fuga, delectus
           similique eum excepturi, consequatur sed ducimus deleniti sunt
-          laboriosam enim! Repellendus, harum.
+          laboriosam enim! Repellendus, harum. jjjk
         </Text>
       </VStack>
     </Container>
